@@ -1,0 +1,70 @@
+.M-about{
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 50vh;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.secondtext{
+    color: black;
+    line-height: 1.2rem;
+    -webkit-text-fill-color: white; 
+    font-size: 10rem;
+    position: absolute;
+    left: 3rem;
+    text-shadow: -1px -1px 0px var(--black),
+    3px 3px 0px  var(--black),
+    6px 6px 0px  var(--black);
+    z-index: 1;
+}
+
+.M-about>:nth-child(2){
+    top: 0.2rem;
+    left: 9.5rem;
+    position: absolute;
+    overflow: hidden;
+}
+
+.secondtext2{
+    color: black;
+    -webkit-text-fill-color: white; 
+    font-size: 10rem;
+    position: absolute;
+    right: 3rem;
+    text-shadow: -1px -1px 0px var(--orange),
+    3px 3px 0px var(--orange),
+    6px 6px 0px var(--orange)
+}
+
+.secondtext:hover{
+    text-shadow: -1px -1px 0px var(--orange),
+    3px 3px 0px var(--orange),
+    6px 6px 0px var(--orange);
+    -webkit-text-fill-color:  var(--black);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.secondtext:not(hover){
+    -webkit-text-fill-color:  white;
+    transition: all 1s ease-in-out;
+}
+
+.secondtext2:hover{
+    text-shadow: -1px -1px 0px var(--black),
+    3px 3px 0px var(--black),
+    6px 6px 0px var(--black
+    );
+    -webkit-text-fill-color:  var(--orange);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.secondtext2:not(hover){
+    -webkit-text-fill-color:  white;
+    transition: all 1s ease-in-out;
+}
+

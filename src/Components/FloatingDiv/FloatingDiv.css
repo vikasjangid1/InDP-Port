@@ -1,0 +1,40 @@
+.floatingdiv {
+    justify-content: space-evenly;
+    display: flex;
+    background: white;
+    box-shadow: var(--boxShadow);
+    border-radius: 17px;
+    align-items: center;
+    width: 8rem;
+    height: 3.5rem;
+    padding: 3px 30px 3px 3px;
+}
+
+.floatingdiv>img{
+    transform: scale(0.4);
+}
+
+.lightText{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.darkText{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+@media screen and (max-width: 480px){
+    .floatingdiv{
+        width: 5.5rem;
+        height: 2.5rem;
+        justify-content: space-evenly;
+        padding: 2px 50px 2px 10px;
+    }
+    .floatingdiv>img{
+        transform: scale(0.3);
+    }
+    .darkText,.lightText{
+        font-size: 14px;
+    }
+}

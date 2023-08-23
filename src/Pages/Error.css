@@ -1,0 +1,35 @@
+.errormain{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+
+.errortext span{
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+    text-transform: uppercase;
+    animation: waviy 1.4s infinite;
+    animation-delay: calc(.1s * var(--i));
+    font-size: 6rem;
+}
+
+.errormain p{
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }

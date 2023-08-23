@@ -1,0 +1,159 @@
+.headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    position: sticky;
+}
+
+.headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+}
+
+.headroom--scrolled {
+    transition: transform 200ms ease-in-out;
+    background: linear-gradient(to bottom right,var(--gray),var(--yellow));
+    text-align: center;
+    padding: 0.5rem 3.5rem;
+    z-index: 4;
+    margin-left:  2rem;
+    margin-right:  2rem;
+    border: 1.5px solid var(--black);
+    border-top: 0px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.headroom--scrolled .button{
+    box-shadow: none;
+    transition:  2s all ;
+}
+.headroom--unpinned {
+    position: fixed;
+    transform: translateY(-100%);
+}
+.headroom--unpinned .button{
+    box-shadow: none;
+}
+
+.headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+    z-index: 5;
+  }
+
+.n-wrapper{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.n-left{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.n-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.n-name:hover {
+    color: var(--gray);
+    transition: 0.5s all;
+}
+.n-name:not(:hover){
+    transition: 0.5s all;
+}
+
+.n-name:hover{
+    cursor: pointer;
+}
+
+.n-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.n-list{
+    flex: 10;
+}
+
+.n-list>ul{
+    display: flex;
+    gap: 1.4rem;
+    margin-right: 4rem;
+    list-style-type: none;
+}
+
+.n-list > ul {
+    transition: color .1s;
+}
+
+.liLight{
+    color: var(--black);
+}
+
+.liLight:hover {
+    cursor: pointer;
+    color: var(--orange);
+    transition: color 0.3s;
+}
+
+.liLight:not(:hover) {
+    color: var(--black);
+    transition: color 0.3s;
+}
+
+.liLight:active{
+    color: rgb(79, 79, 75);
+}
+
+.liDark{
+    color: white;
+}
+
+.liDark:hover {
+    cursor: pointer;
+    color: var(--orange);
+    transition: color 0.3s;
+}
+
+.liDark:not(:hover) {
+    color: white;
+    transition: color 0.3s;
+}
+
+.liDark:active{
+    color: rgb(79, 79, 75);
+}
+
+.n-button{
+    flex: 1;
+}
+
+/* @media screen and (max-width: 480px){
+    .n-list{
+        display: none;
+    }
+
+    .n-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .n-left{
+        flex: 2;
+        gap: 1rem;
+    }
+
+    .headroom--scrolled{
+        display: none;
+    }
+} */

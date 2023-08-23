@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=PT+Sans+Narrow&display=swap');
+
+.f-head a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.footer{
+    display: flex;
+    margin: -0.5rem -3.5rem  ;
+    position: relative;
+    margin-top: -4rem;
+    width: 100%;
+    height: 140vh;
+    color: var(--black);
+}
+
+.f-head{
+    width: 100%;
+    height: 70vh;
+    margin-top:15rem;
+    padding: 0.5rem 3.5rem;
+    position: absolute;
+}
+
+.f-content{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8rem;
+}
+
+.sitemap, .mid-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.sitemap > *{
+    /* font-size: 0.85rem; */
+}
+
+.sitemap> :nth-child(1){
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.f-icons div{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.f-icons> :nth-child(1){
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.f-icons>:nth-child(2)>div{
+    margin-top: 0.7rem;
+}
+
+.f-icons div>span{
+    font-size: 0.9rem;
+}
+
+.f-icons>a>div{
+    margin-bottom: 0.25rem;
+}
+
+.mid-content>a>span{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mid-content>:nth-child(2){
+    margin-top: 0.3rem ;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.f-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    margin-top: 3rem;
+}
+
+.f-name> :nth-child(1){
+    width: 100%;
+    position: absolute;
+    font-family: 'Agdasima', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 12rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-overflow: "----";
+    color: rgb(79, 79, 75);
+}
+
+.sitemap span:hover, a:hover,.f-icons a:hover{
+    color: white;
+    transition: all 0.5s;
+    border-color: white;
+    cursor: pointer;
+}
+
+.sitemap span:active, a:active,.f-icons a:active,.mid-content>a>span:active{
+    color: rgb(79, 79, 75);
+    transition: all 0.05s;
+}
+
+.sitemap a,.sitemap span,.f-icons a:not(hover){
+    color: var(--black); 
+    transition: all 0.9s;
+}
+
+.mid-content > a>span {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		margin: -5px 0;
+		background-color: white;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.4s ease-in-out 0s;
+	}
+	&:hover:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
+}
+
+
+/* @media screen and (min-width: 320px){
+    .footer{
+        display: flex;
+        margin: -0.5rem -7rem;
+        position: relative;
+        margin-top: 10rem;
+        width: 100%;
+        height: 80vh;
+        color: var(--black);
+    }
+
+    .f-head{
+        position: absolute;
+        width: 20%;
+        height: 70vh;
+        margin-top: 10rem;
+        padding: 0.5rem 15rem ;
+        justify-content: center;
+    }
+    
+    .f-content{
+        width: 20%;
+        height: 20vh;
+    }
+    
+    .f-icons{
+        padding-right:  11rem;
+        width: 20%;
+        height: 20vh;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 1rem;
+        transform: scale(1.4);
+        margin-top: -2rem;
+    }
+
+    .f-icons>:nth-child(1){
+        display: none;
+    }
+    
+    .f-icons div>span{
+        display: none;
+    }
+
+    .f-icons>:nth-child(2)>div{
+        margin-top: 0;
+    }
+
+    .sitemap,.mid-content{
+        display: none;
+    }
+    
+    .f-name> :nth-child(1){
+        font-size: 3.5rem;
+        margin-bottom: 10rem;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .footer{
+        display: flex;
+        margin: -0.5rem -7rem;
+        position: relative;
+        margin-top: 10rem;
+        width: 100%;
+        height: 80vh;
+        color: var(--black);
+    }
+
+    .f-head{
+        position: absolute;
+        width: 20%;
+        height: 70vh;
+        margin-top: 10rem;
+        padding: 0.5rem 15rem ;
+        justify-content: center;
+    }
+    
+    .f-content{
+        width: 20%;
+        height: 20vh;
+    }
+    
+    .f-icons{
+        padding-right:  7rem;
+        width: 20%;
+        height: 20vh;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+        transform: scale(1.7);
+        margin-top: -2rem;
+    }
+
+    .f-icons>:nth-child(1){
+        display: none;
+    }
+    
+    .f-icons div>span{
+        display: none;
+    }
+
+    .f-icons>:nth-child(2)>div{
+        margin-top: 0;
+    }
+
+    .sitemap,.mid-content{
+        display: none;
+    }
+    .f-name> :nth-child(1){
+        font-size: 5rem;
+        margin-bottom: 10rem;
+    }
+} */
+
